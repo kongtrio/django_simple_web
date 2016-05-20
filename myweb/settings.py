@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'ourlove',
+    'english'
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -92,13 +93,13 @@ DATABASES = {
     # postgres       pip install psycopg2
     # createdb -h localhost -p 5432 -U test myweb
      'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'myweb',
-        'USER':'test',
-        'PASSWORD':'test',
-        'HOST':'',
-        'PORT':'',
-    }
+         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+         'NAME': 'myweb',
+         'USER': 'test',
+         'PASSWORD': 'test',
+         'HOST': '',
+         'PORT': '',
+     }
 }
 
 # Password validation

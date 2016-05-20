@@ -16,9 +16,13 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from ourlove import views
+from english import views as eng_view
 
 urlpatterns = [
     url(r'^article$', views.article, name='article'),
+    url(r'^english/index$', eng_view.index),
+    url(r'^english/translate/([a-zA-Z]+)', eng_view.translate_word, name='translate'),
+    url(r'^english/translate$', eng_view.translate),
     url(r'^$', views.index, name='home'),
     url(r'^admin/', admin.site.urls),
 ]

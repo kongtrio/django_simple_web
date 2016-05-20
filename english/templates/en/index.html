@@ -1,0 +1,29 @@
+{% extends 'decorate/base.html' %}
+
+{% block title %}单词翻译{% endblock %}
+
+{% block content %}
+    <div class="r_box">
+        <li>
+            <form action="/english/translate" method="post">
+                {% csrf_token %}
+                单词<input name="word"/>
+                <input type="submit" value="提交">
+            </form>
+        </li>
+        {% if not_found == True %}
+            <li style="color: red">
+                找不到单词{{ search_word }}的翻译
+            </li>
+        {% else %}
+            <li>
+                英文单词:{{ word.en_word }}</li>
+            <li>中文翻译:{{ word.cn_word }}</li>
+            <li>拼写:{{ word.en_spell }}</li>
+            <li>例句:{{ word.sentence }}</li>
+            <li>更多同义词:{{ word.more_word }}</li>
+            <li>近义词:{{ word.opposites_word }}</li>
+        {% endif %}
+
+    </div>
+{% endblock %}

@@ -1,115 +1,8 @@
-<!doctype html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>我们的网上小窝</title>
-    <meta name="Keywords" content="我们的网上小窝">
-    <meta name="Description" content="我们的网上小窝">
-    <link href="/static/css/index.css" rel="stylesheet">
-    <!--[if lt IE 9]>
-<script src="js/modernizr.js"></script>
-<![endif]-->
-</head>
-<body>
-<header>
-    <h1><a href="/">哈丘の小鱼<em>{{ loveDays }}天</em></a></h1>
-    <p>小鱼,在最好的时光里,我遇见你。不,为什么不让我早点遇到你....</p>
-</header>
-<!--nav begin-->
-<div id="nav">
-    <ul>
-        <li><a href="/">首页</a></li>
-        <li><a href="#">关于我</a></li>
-        <li><a href="#">故事</a></li>
-    </ul>
-</div>
-<!--nav end-->
-<div class="blank"></div>
-<div class="banner">
-    <ul class="boy_girl">
-        <li class="girlimg"><a href="/"><span>关于她</span></a></li>
-        <li class="boyimg"><a href="/"><span>关于我</span></a></li>
-    </ul>
-    <ul class="texts">
-        <p><img src="/static/images/t-1.png" alt="人生，是一场盛大的遇见"></p>
-        <p><img src="/static/images/t-2.png" alt="若你懂得，就请珍惜。"></p>
-        <p><img src="/static/images/t-3.png" alt="无论下多久的雨，最后都会有彩虹；无论你多么悲伤，要相信幸福在前方等候"></p>
-    </ul>
-</div>
-<div class="blank"></div>
-<div class="memorial_day">
-    <div class="time_axis"></div>
-    <ul>
-        <li class="n1"><a href="/">第一次约会</a>
-            <div class="dateview">2015-11-28</div>
-        </li>
-        <li class="n2"><a href="/">在一起</a>
-            <div class="dateview">2016-01-01</div>
-        </li>
-        <li class="n3"><a href="/">住到一起</a>
-            <div class="dateview">2016-03-13</div>
-        </li>
-        <li class="n4"><a href="/">一起去她家</a>
-            <div class="dateview">2016-04-29</div>
-        </li>
-        <li class="n5"><a href="/">一起回我家</a>
-            <div class="dateview">2016-05-13</div>
-        </li>
-    </ul>
-</div>
-<div class="blank"></div>
-<article>
-    <div class="l_box">
-        <div class="about_me">
-            <h2>关于我</h2>
-            <ul>
-                <img src="/static/images/boyhead.png">
-                <p>网名：疯狂的哈丘</p>
-                <p>主页：<a href="http://www.yangjb.mom" style="color: #5d5d5d;font-size: 12px">http://www.yangjb.mom</a>
-                </p>
-                <p>职业：JAVA程序猿</p>
-            </ul>
-        </div>
-        <div class="about_he">
-            <h2>关于她</h2>
-            <ul>
-                <img src="/static/images/girlhead.png">
-                <p>网名：追风筝的人</p>
-                <p>主页：保密</p>
-                <p>职业：JAVA程序媛</p>
-            </ul>
+{% extends 'decorate/base.html' %}
 
-        </div>
-        <div class="newslist">
-            <h2>我们的故事</h2>
-            <ul>
-                <li><a href="#">这是属于我们的网上小窝</a></li>
-                <li><a href="#">记录我们的点点滴滴</a></li>
-                <li><a href="#"> 我希望将来我们的故事能充满这个网站</a></li>
-                <li><a href="#"> 等我们老了,再来到这里</a></li>
-                <li><a href="#"> 一起看看曾经经历过的那些事</a></li>
-                <li><a href="#"> 那一定是很有趣</a></li>
-                <li><a href="#"> 人的一生很短也很长</a></li>
-                <li><a href="#"> 我想有你能陪我一起走完,我一定不会寂寞</a></li>
-                <li><a href="#"> 小鱼我会爱你一辈子</a></li>
-                <li><a href="#"> 2016.5.20</a></li>
-            </ul>
-        </div>
-        <div class="viny">
-            <ul>
-                <dl>
-                    <dt class="art"><img src="/static/images/tiankong.jpg" alt="专辑"></dt>
-                    <dd class="icon-song"><span></span>天空之城</dd>
-                    <dd class="icon-artist"><span></span>歌手：久石让</dd>
-                    <dd class="icon-album"><span></span>专辑：《天空之城》</dd>
-                    <dd class="music">
-                        <audio autoplay loop src="/static/images/tiankong.mp3" controls></audio>
-                    </dd>
-                    <!--也可以添加loop属性 音频加载到末尾时，会重新播放-->
-                </dl>
-            </ul>
-        </div>
-    </div>
+{% block title %}幸福来的如此突然{% endblock %}
+
+{% block content %}
     <div class="r_box">
         <!--l_box end -->
         <li>
@@ -137,11 +30,4 @@
             <p>今天是2016年5月20号,我们在一起的第141天。剩下的几十个5月20号,还有上百个的141天,我们都要一起度过。我爱你小鱼</p>
         </li>
     </div>
-</article>
-<footer>
-    <p>Design by DanceSmile</p>
-</footer>
-</body>
-<script type="text/javascript">
-</script>
-</html>
+{% endblock %}
