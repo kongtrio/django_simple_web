@@ -3,6 +3,7 @@ from django.shortcuts import render
 from .models import Word
 from util import translate_en_word
 from django.http import HttpResponseRedirect
+from django.core.urlresolvers import reverse
 
 
 # Create your views here.
@@ -16,7 +17,7 @@ def translate(request):
     if post_len == 0:
         return HttpResponseRedirect('/english/index')
     word = request.POST['word']
-    return HttpResponseRedirect('/english/translate/' + word)
+    return HttpResponseRedirect(reverse('translate', args={word: word}))
 
 
 def translate_word(request, word):
