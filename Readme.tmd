@@ -1,0 +1,13 @@
+#创建一个后台管理用户
+#python manage.py createsuperuser
+
+#刷新数据库
+#python manage.py makemigrations
+#python manage.py migrate
+
+#运行项目
+#python manage.py runserver 127.0.0.1:8000
+
+#新建一个新的app
+python manage.py startapp article
+

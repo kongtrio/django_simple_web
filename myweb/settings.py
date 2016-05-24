@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'ourlove',
-    'english'
+    'english',
+    'article'
 ]
 
 MIDDLEWARE_CLASSES = [

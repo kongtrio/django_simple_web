@@ -4,28 +4,12 @@
     <a name="A"></a>
     <!--l_box end -->
     <div class="r_box">
-        <li><a href="/"><img src="/static/images/play.JPG"></a>
-            <h3><a href="/">这是标题这是标题这是标题</a></h3>
-            <p>
-                这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容</p>
-        </li>
-        <li><a href="#A"><img src="/static/images/play2.PNG"></a>
-            <h3><a href="#A">这是标题这是标题这是标题</a></h3>
-            <p>这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容</p>
-        </li>
-        <li><a href="#A"><img src="/static/images/play5.JPG"></a>
-            <h3><a href="#A">这是标题这是标题这是标题</a></h3>
-            <p>这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容。</p>
-        </li>
-        <li><a href="#A"><img src="/static/images/play3.JPG"></a>
-            <h3><a href="#A">这是标题这是标题这是标题</a></h3>
-            <p>
-                这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容</p>
-        </li>
-        <li><a href="#A"><img src="/static/images/play4.JPG"></a>
-            <h3><a href="#A">这是标题这是标题这是标题</a></h3>
-            <p>
-                这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容</p>
-        </li>
+        {% for i in articles %}
+            <li><a href="{% url 'article' i.id %}"><img src="{{ i.image }}"></a>
+                <h3><a href="{% url 'article' i.id %}">{{ i.title }}</a></h3>
+                <p>
+                    {{ i.content }}</p>
+            </li>
+        {% endfor %}
     </div>
 {% endblock %}

@@ -17,8 +17,12 @@ from django.conf.urls import url
 from django.contrib import admin
 from ourlove import views
 from english import views as eng_view
+from article import views as art_view
 
 urlpatterns = [
+    url(r'^article/(\d)$', art_view.article, name='article'),
+    url(r'^article/write$', art_view.write, name='to_write'),
+    url(r'^article/add', art_view.add, name='add_article'),
     url(r'^english/index$', eng_view.index),
     url(r'^english/translate/([a-zA-Z]+)', eng_view.translate_word, name='translate'),
     url(r'^english/translate$', eng_view.translate),

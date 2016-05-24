@@ -1,0 +1,19 @@
+{% extends 'decorate/base.html' %}
+
+{% block title %}写日志{% endblock %}
+
+{% block content %}
+    <div class="r_box">
+        <!--l_box end -->
+        <li>
+            <form action="/article/add" method="post">
+                {% csrf_token %}
+                <label>标题</label><input name="title"/><br/><br/>
+                <label>封面图片</label><input name="images"/><br/><br/>
+                <label>文章内容</label><textarea name="content" cols="80" rows="20"></textarea><br/><br/>
+                <label>你的大名</label><input name="author"/><br/><br/>
+                <input type="submit" name="提交"/><br/>
+            </form>
+        </li>
+    </div>
+{% endblock %}
