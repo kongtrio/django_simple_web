@@ -11,3 +11,6 @@
 #新建一个新的app
 python manage.py startapp article
 
+#收集图片
+python manage.py collectstatic
+
